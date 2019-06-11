@@ -6,12 +6,18 @@
     </head>
 
     <body>
-        <form action="results" method="post">
+        <form action="#" method="post">
             <label>Color</label>
-            <select name="color">
+            <select class="form-control" name="color" id="color">
+                <option>--Select a color--</option>
+                <!--
                 <option value="red">Red</option>
                 <option value="blue">Blue</option>
                 <option value="green">Green</option>
+                -->
+                <repeat group="{{ @colors }}" value="{{ @colorOption }}">
+                    <option>{{ @colorOption }}</option>
+                </repeat>
             </select>
 
             <input type="submit" value="Submit">
