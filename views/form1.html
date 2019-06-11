@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Pets Form 1</title>
+
+        <style>
+            .err {
+                color: red;
+            }
+        </style>
     </head>
 
     <body>
@@ -13,6 +19,9 @@
             </label>
 
             <input type="submit" value="Next">
+            <check if="{{ isset(@errors['animal']) }}">
+                <p class="err">{{ @errors['animal'] }}</p>
+            </check>
         </form>
     </body>
 </html>
